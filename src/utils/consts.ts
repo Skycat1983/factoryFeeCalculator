@@ -82,7 +82,6 @@ export const initialState = {
   cartValue: 0,
   deliveryDistance: 0,
   numberOfItems: 0,
-  // orderTime: new Date(),
   orderTime: new Date(),
 };
 

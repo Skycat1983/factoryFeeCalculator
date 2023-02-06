@@ -1,6 +1,8 @@
 import { difference } from "./utils/menu";
 import { ChargeState, FormState } from "./utils/types";
 
+//! these functions would eventually be replaced by dynamically generated ones
+
 export const placeholderFreeDelivery = (state: FormState) => {
   let unit = "cartValue";
   let threshold = 100;

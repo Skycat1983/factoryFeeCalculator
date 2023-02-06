@@ -33,7 +33,6 @@ export const surcharge = (
   threshold: number,
   rate: number
 ) => {
-  // let excess = difference(quantity, threshold)
   return product(quotient(quantity, threshold), rate);
 };
 

@@ -15,7 +15,7 @@ export interface Modifier {
   consequence:
     | "percent-multiplier"
     | "percent-discount"
-    | "fee-ceiling" //! maybe interchangable with calc excess, subtract excess
+    | "fee-ceiling"
     | "fee-floor";
   rate: number;
 }
@@ -29,6 +29,7 @@ export interface Props {
   handleSubmit: (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => void;
+  formattedValue: number | string;
 }
 
 export interface Fee {
@@ -51,7 +52,6 @@ export interface ChargeState {
   distanceFee: number;
   itemsFee: number;
   timeFee: number;
-  // total: number;
 }
 
 export interface Quantity {

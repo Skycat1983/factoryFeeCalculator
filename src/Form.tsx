@@ -6,8 +6,8 @@ const CalcForm: React.FC<Props> = ({
   state,
   setState,
   errors,
-  totalDeliveryFee,
   handleSubmit,
+  formattedValue,
 }) => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
@@ -42,7 +42,7 @@ const CalcForm: React.FC<Props> = ({
             <p> Cart value (€):</p>
             <input
               className={errors.cartValueError ? "error" : "success"}
-              data-type="currency"
+              type="number"
               name="cartValue"
               onChange={handleChange}
               placeholder={errors.cartValueError || "Enter cart value"}
@@ -84,7 +84,8 @@ const CalcForm: React.FC<Props> = ({
           <br />
           <label>
             <p> Total delivery fee (€):</p>
-            <div className="output">{totalDeliveryFee}</div>
+            <div className="output">{formattedValue}</div>
+            {/* <div className="output">{totalDeliveryFee}</div> */}
           </label>
           <div className="button-box">
             <button className="my-button" onClick={handleSubmit}>

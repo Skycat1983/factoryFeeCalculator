@@ -1,4 +1,3 @@
-import React from "react";
 import { FormState, ErrorState } from "./utils/types";
 
 export function validate(state: FormState): ErrorState {
@@ -29,7 +28,6 @@ export function validate(state: FormState): ErrorState {
       }
     }
   };
-  //! if (error.something === null) doesn't work because we aren't resetting fields on each submit
   const validateFormats = (state: FormState) => {
     if (errors.deliveryDistanceError === null && deliveryDistance % 1 !== 0) {
       errors.deliveryDistanceError = "delivery distance must be an integer";
@@ -37,13 +35,13 @@ export function validate(state: FormState): ErrorState {
     if (errors.numberOfItemsError === null && numberOfItems % 1 !== 0) {
       errors.numberOfItemsError = "item count must be an integer";
     }
-    // if (
-    //   errors.cartValueError === null &&
-    //   cartValue > 0 &&
-    //   (cartValue.toString().split(".")[1] || "").length !== 2
-    // ) {
-    //   errors.cartValueError = "cartValue must be to two decimal places";
-    // }
+    if (
+      errors.cartValueError === null &&
+      cartValue > 0 &&
+      (cartValue * 100) % 1 !== 0
+    ) {
+      errors.cartValueError = "cartValue must be to two decimal places";
+    }
   };
 
   validateNums(state);
@@ -51,6 +49,3 @@ export function validate(state: FormState): ErrorState {
 
   return errors as ErrorState;
 }
-//? also once it passes validation, it continues passing validation even when it shouldn't? reverting to type string
-//* some confusion aboutt how to use types
-//? why isn't validate working for negative numbers?

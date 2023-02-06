@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { validate } from "./validate";
 import { ErrorState, ChargeState, FormState } from "./utils/types";
 import {
@@ -24,6 +24,8 @@ export default function App() {
   const [errors, setErrors] = useState<ErrorState>(initialErrorState);
   const [totalDeliveryFee, setTotalDeliveryFee] =
     useState<TotalFee>(initialTotal);
+
+  const formattedValue = (+totalDeliveryFee).toFixed(2);
 
   // free delivery/no delivery
   const checkPreconditons = (state: FormState, funcs: Function[]) => {
@@ -80,6 +82,7 @@ export default function App() {
       }
     }
   };
+  console.log(errors);
 
   return (
     <div>
@@ -91,6 +94,7 @@ export default function App() {
         setErrors={setErrors}
         totalDeliveryFee={totalDeliveryFee}
         handleSubmit={handleSubmit}
+        formattedValue={formattedValue}
       />
     </div>
   );
