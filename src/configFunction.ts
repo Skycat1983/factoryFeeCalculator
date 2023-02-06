@@ -35,10 +35,3 @@ export function configFunction(props: Fee) {
 export function configTotal(props: Modifier) {
   let { unit, threshold, clause, consequence, rate } = props;
 }
-
-// let formatFee = (number: number) => {};
-// if (unit === "distance") {
-//   formatFee = roundUp;
-// } else {
-//   formatFee = toCurrency;
-// }
