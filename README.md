@@ -1,46 +1,21 @@
-# Getting Started with Create React App
+The FeeFactory: a working prototype calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The brief for this project was to build a calculator that can process a series of preset fees. I wanted to expand on this a bit and see if I could build a calculator that can calculate any number of fees, even if it doesn't yet know what those fees will look like. After giving it some thought, I grew certain this was possible due the fundamental building blocks that all fees share.
 
-## Available Scripts
+Indeed, any fee (that I can think of) can be described using the following properties:
 
-In the project directory, you can run:
+1. Threshold: the point beyond/before which a fee is triggered.
+2. Clause: the condition against which a variable is measured against a threshold.
+3. Rate: the amount.
+4. Interval: the frequency at which the rate will apply.
 
-### `npm start`
+With this in mind,
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+At runtime this calculator assembles and configures the functions it will need for various inputs, and separates them accordingly. Although the task brief included only a couple of different fees for each user-supplied input, this calculator can calculate 
+this calculator is not constrained by
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+What makes this calculator unique
+this level of granularity allows a calculator to be much more flexible and adaptable. when seen through to its conclusion, it would allow for dynamic and programmatic prioritisation of fee assertions, without having to change the functions themselves. 
+a fee calculator of this nature could conceivably process different and varying quantities of localised fees for differing regions.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+finally, by building the calculator this way, and by breaking down the nature of a fee into a set of universal properties, we also unlock the potential of dynamic fee name generation, which probably isn't actually that useful but is definitely kinda cool.
