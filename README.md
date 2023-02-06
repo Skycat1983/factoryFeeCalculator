@@ -9,13 +9,8 @@ Indeed, any fee (that I can think of) can be described using the following prope
 3. Rate: the amount.
 4. Interval: the frequency at which the rate will apply.
 
-With this in mind,
+With these shared properties it was possible to describe all manner and shape of fees in the brief. This allowed me to make a function that accepted fee 'blueprints' as arguments, and then assembles and configures the functions it will need for various user inputs, separating them accordingly. Although the task brief included only a couple of different fees for each user-supplied input, this calculator can calculate as many fees as you can throw at it.
 
-At runtime this calculator assembles and configures the functions it will need for various inputs, and separates them accordingly. Although the task brief included only a couple of different fees for each user-supplied input, this calculator can calculate 
-this calculator is not constrained by
+Although it's not finished, this working prototype has a level of granularity that potnetially allows it to be much more flexible and adaptable than had i made it with preset fee calculations in mind. I imagine a calculator of this nature could prove useful if there was a need to process different and varying quantities of localised fees for differing regions.
 
-What makes this calculator unique
-this level of granularity allows a calculator to be much more flexible and adaptable. when seen through to its conclusion, it would allow for dynamic and programmatic prioritisation of fee assertions, without having to change the functions themselves. 
-a fee calculator of this nature could conceivably process different and varying quantities of localised fees for differing regions.
-
-finally, by building the calculator this way, and by breaking down the nature of a fee into a set of universal properties, we also unlock the potential of dynamic fee name generation, which probably isn't actually that useful but is definitely kinda cool.
+Finally, by building the calculator this way, and by breaking down the nature of a fee into a set of universal properties, we also unlock the potential of dynamic fee name generation, which probably isn't actually that useful but is definitely quite cool.
