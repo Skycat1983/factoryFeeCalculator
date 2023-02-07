@@ -1,4 +1,3 @@
-import { roundUp, toCurrency } from "./utils/menu";
 import { Fee, Modifier } from "./utils/types";
 
 export function configFunction(props: Fee) {
