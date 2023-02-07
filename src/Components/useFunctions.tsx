@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import { configFunction } from "./configFunction";
+import { configFunction } from "../configFunction";
 
 interface Fee {
   unit: "value" | "distance" | "item" | "time" | "total";

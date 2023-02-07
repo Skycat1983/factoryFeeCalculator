@@ -2,7 +2,7 @@ import { roundUp, toCurrency } from "./utils/menu";
 import { Fee, Modifier } from "./utils/types";
 
 export function configFunction(props: Fee) {
-  let { unit, threshold, clause, rate, interval } = props;
+  let { threshold, clause, rate, interval } = props;
   let calc = (input: number) => {
     if (clause === "<" || clause === "<=") {
       rate = rate * -1;

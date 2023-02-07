@@ -25,7 +25,6 @@ export interface Props {
   setCharges: React.Dispatch<React.SetStateAction<ChargeState>>;
   errors: ErrorState;
   setErrors: React.Dispatch<React.SetStateAction<ErrorState>>;
-  totalDeliveryFee: number | "";
   handleSubmit: (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => void;

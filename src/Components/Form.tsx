@@ -1,6 +1,6 @@
 import React from "react";
-import { Props } from "./utils/types";
-import "./index.css";
+import { Props } from "../utils/types";
+import "../index.css";
 
 const CalcForm: React.FC<Props> = ({
   state,

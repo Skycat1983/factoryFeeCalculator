@@ -8,9 +8,9 @@ import {
   feeArray,
 } from "./utils/consts";
 import { isObjectEmpty, toCurrency, roundUp } from "./utils/menu";
-import CalcForm from "./Form";
+import CalcForm from "./Components/Form";
 import {} from "./placeholders";
-import useFunctions from "./useFunctions";
+import useFunctions from "./Components/useFunctions";
 import { preconditionsArr, accumulatorsArr } from "./placeholders";
 
 type TotalFee = number | "";
@@ -27,17 +27,14 @@ export default function App() {
 
   const formattedValue = (+totalDeliveryFee).toFixed(2);
 
-  // free delivery/no delivery
   const checkPreconditons = (state: FormState, funcs: Function[]) => {
     return funcs.map((func) => (func(state) ? true : false));
   };
 
-  // calc individual fees from inputs
   const applyFees = (value: number | Date, funcs: Function[]) => {
     return funcs.reduce((acc, func) => acc + func(value), 0);
   };
 
-  // calc totals from returns
   const applyAccumulaters = (
     state: FormState,
     charges: ChargeState,
@@ -92,7 +89,7 @@ export default function App() {
         setCharges={setCharges}
         errors={errors}
         setErrors={setErrors}
-        totalDeliveryFee={totalDeliveryFee}
+        // totalDeliveryFee={totalDeliveryFee}
         handleSubmit={handleSubmit}
         formattedValue={formattedValue}
       />
