@@ -5,15 +5,15 @@ The brief for this project- pasted below- was to build a calculator that can pro
 Indeed, any fee (that I can think of) can be described using the following properties blueprint:
 
 1. Threshold: the point beyond/before which a fee is triggered.
-2. Clause: the condition which must acconpany a threshold.
+2. Clause: the condition which must accompany a threshold.
 3. Rate: the amount.
 4. Interval: the frequency at which the rate will trigger/apply.
 
 With a value for each of these shared properties it was possible to perfectly describe the calculation instructions for every fee mentioned in the brief. This allowed me to make a function that accepted any number of fee 'blueprints' as arguments, to then return an equal number of fee calculators, with each fee calculator assembled and configured for the purpose of targeting a specific user input in accordance with the brief. Finally, the results of this 'configuration' are pushed to a corresponding functions array, to await a particular user input. When this input arrives (onSubmit), we iteratively apply each functiion in the array to the given input, adding the result to an accumulator, which we return.
 
-Although this calculator has met the criteria outlined in the brief, i do not consider it 'finished'. Due to time constraints, some 'placeholder' code remains. This placeholder code performs functions that are- as yet- not generated. These hardcoded fuctions were necessary to account for the fact that while some fee calculator functions take an input as an argument, others take a total. Naturally those functions which take an input should run before those which take a total, and as i did not have time to devise a way of programmatically allocating prioritisation to these functions during configuration, i thought it best just to set that task aside for now. Nonetheless, the criteria which can be used to describe those hardcoded functions remains the same as outlined above, and this is visible in the code.
+Although this calculator has met the criteria outlined in the brief, i do not consider it 'finished'. Due to time constraints, some 'placeholder' code remains. This placeholder code performs functions that are- as yet- not dynamically generated. These hardcoded fuctions were necessary to account for the fact that while some fee calculator functions take an input as an argument, others take a total. Naturally those functions which take an input should run before those which take a total, and as i did not have time to devise a way of programmatically allocating prioritisation to these functions during configuration, i thought it best just to set that task aside for now. Nonetheless, the criteria which can be used to describe those hardcoded functions remains the same as outlined above, and this is visible in the placeholder code.
 
-Anyway, this task turned into something of a labour of love for me, and i'm pleased with the initial results. The calculator has a level of granularity that potnetially allows it to be much more flexible and adaptable than had i made it with preset fee calculations in mind. Indeed, by having a system that understands the core structure of a fee, we can overcome the need to craft our solutions by hand.
+Anyway, this task turned into something of a labour of love for me, and i'm pleased with the initial results, even if there is a lot of room for improvement. The calculator has a level of granularity that potnetially allows it to be much more flexible and adaptable; at least moreso than one made with preset fee calculations in mind. Indeed, by having a system that understands the core structure of a fee, we can overcome the need to craft our solutions by hand.
 
 I imagine a calculator of this nature could prove useful if there was a need to process different and varying quantities of localised fees for differing regions. Alternatively, perhaps a client has a very broad spectrum of potential fees, and would like the ability to substitue any number of these at will, without having to delve too deep into the code. With just a basic understanding of the 'fee blueprint' outlined above, this calculator allows that.
 
@@ -23,7 +23,7 @@ Finally, if you are an employer reading this, I hope i have not left the impress
 
 <!-- ------------------------- -->
 
-Known issue: there is a bug in validation which sometimes leads to an error ("cartValue must be to two decimal places") being incorrectly returned. This prevents any fee calculations from running.
+Known issue: there is a bug in validation which sometimes leads to an error ("cartValue must be to two decimal places") being incorrectly returned. This prevents any fee calculations from running. The most reliable/expedient solution is just to refresh
 
 <!-- ------------------------- -->
 
