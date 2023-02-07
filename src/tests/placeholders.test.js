@@ -1,4 +1,7 @@
-import { placeholderFreeDelivery, placeholderTimeCalc } from "../placeholders";
+import {
+  placeholderFreeDelivery,
+  placeholderTimeCalc,
+} from "../utils/placeholders";
 
 test("check if cartValue is more than or equal to the threshold (100) to return true", () => {
   expect(

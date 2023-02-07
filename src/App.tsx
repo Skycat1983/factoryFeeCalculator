@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { validate } from "./validate";
+import { validate } from "./utils/validate";
 import { ErrorState, ChargeState, FormState } from "./utils/types";
 import {
   initialState,
@@ -9,9 +9,9 @@ import {
 } from "./utils/consts";
 import { isObjectEmpty, toCurrency, roundUp } from "./utils/menu";
 import CalcForm from "./Components/Form";
-import {} from "./placeholders";
+import {} from "./utils/placeholders";
 import useFunctions from "./Components/useFunctions";
-import { preconditionsArr, accumulatorsArr } from "./placeholders";
+import { preconditionsArr, accumulatorsArr } from "./utils/placeholders";
 
 type TotalFee = number | "";
 

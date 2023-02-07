@@ -1,5 +1,5 @@
-import { difference } from "./utils/menu";
-import { ChargeState, FormState } from "./utils/types";
+import { difference } from "./menu";
+import { ChargeState, FormState } from "./types";
 
 export const placeholderFreeDelivery = (state: FormState) => {
   let unit = "cartValue";

@@ -1,4 +1,4 @@
-import { FormState, ErrorState } from "./utils/types";
+import { FormState, ErrorState } from "./types";
 
 export function validate(state: FormState): ErrorState {
   const errors: ErrorState = {

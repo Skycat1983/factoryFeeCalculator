@@ -21,11 +21,11 @@ One final area of untapped scope within the FeeFactory calculator is that of its
 
 Finally, if you are an employer reading this, I hope i have not left the impression that I am someone who can't see an obvious answer to an easy question. Rather, I assume this assignment attracted a lot of similar approaches, and so i thought i'd take this opportunity to demonstrate a bit of creativity. I have certainly learnt a lot along the way, and had i the time again I would certainly do things differently (the major one being stringent adherence to tdd from the start!). But overall i'm pleased. My previous projects demanded a high level of content in a short space of time, and so i found it really rewarding to approach a task with a more patient and measured mindset.
 
-<!-- ------------------------- -->
+---
 
 Known issue: there is a bug in validation which sometimes leads to an error ("cartValue must be to two decimal places") being incorrectly returned. This prevents any fee calculations from running. The most reliable/expedient solution is just to refresh
 
-<!-- ------------------------- -->
+---
 
 _The Brief_:
 

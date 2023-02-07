@@ -1,4 +1,4 @@
-import { Fee, Modifier } from "./utils/types";
+import { Fee, Modifier } from "./types";
 
 export function configFunction(props: Fee) {
   let { threshold, clause, rate, interval } = props;
