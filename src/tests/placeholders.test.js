@@ -1,5 +1,6 @@
 import {
   placeholderFreeDelivery,
+  preconditionsArr,
   placeholderTimeCalc,
 } from "../utils/placeholders";
 

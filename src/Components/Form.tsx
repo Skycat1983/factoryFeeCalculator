@@ -85,7 +85,6 @@ const CalcForm: React.FC<Props> = ({
           <label>
             <p> Total delivery fee (€):</p>
             <div className="output">{formattedValue}</div>
-            {/* <div className="output">{totalDeliveryFee}</div> */}
           </label>
           <div className="button-box">
             <button className="my-button" onClick={handleSubmit}>
