@@ -13,9 +13,13 @@ import {} from "./utils/placeholders";
 import useFunctions from "./Components/useFunctions";
 import { preconditionsArr, accumulatorsArr } from "./utils/placeholders";
 
+// json config look into
+
 type TotalFee = number | "";
 
 const initialTotal = "";
+
+//! builder pattern
 
 export default function App() {
   const { functions } = useFunctions(feeArray);

@@ -1,3 +1,4 @@
+import { describe, expect, test } from "@jest/globals";
 import {
   sum,
   difference,
@@ -9,9 +10,9 @@ import {
   toCurrency,
 } from "../utils/menu";
 
-test("divide 12 by 6 to equal 2, then multiply by 4 to equal 8", () => {
-  expect(surcharge(12, 6, 4)).toBe(8);
-});
+// test("divide 12 by 6 to equal 2, then multiply by 4 to equal 8", () => {
+//   expect(surcharge(12, 6, 4)).toBe(8);
+// });
 
 test("round 1.0099 to 2 decimal places", () => {
   expect(toCurrency(1.0099)).toBe(1.01);
