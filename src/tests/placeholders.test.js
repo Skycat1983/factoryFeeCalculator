@@ -24,3 +24,10 @@ test("check if cartValue is less than the threshold (100) to return false", () =
     })
   ).toBe(false);
 });
+
+// test("check if time penalty works", () => {
+//   expect(
+//     placeholderTimeCalc({
+//     })
+//   ).toBe(false);
+// });

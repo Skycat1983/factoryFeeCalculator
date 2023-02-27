@@ -93,7 +93,6 @@ export default function App() {
         setCharges={setCharges}
         errors={errors}
         setErrors={setErrors}
-        // totalDeliveryFee={totalDeliveryFee}
         handleSubmit={handleSubmit}
         formattedValue={formattedValue}
       />
